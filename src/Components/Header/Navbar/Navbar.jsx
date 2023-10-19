@@ -7,7 +7,7 @@ const Navbar = () => {
     <div >
       <div className=''>
       <div className=''>
-        <NavLink to="/" className={({isActive, isPending})=>isPending ? "pending" : isActive ? "text-[#FF444A] border-b-4 border-black rounded px-2  hover:bg-white text-lg mr-5 inline-block" : "text-lg font-normal text-white gap-5 mr-5"}>Home</NavLink>
+        <NavLink to="/" className={({isActive, isPending})=>isPending ? "pending" : isActive ? "text-[#FF444A] border-b-4 border-black rounded px-2  hover:bg-white text-lg mr-5" : "text-lg font-normal text-white gap-5 mr-5"}>Home</NavLink>
         <NavLink to="add product" className={({isActive, isPending})=>isPending ? "pending" : isActive ? "text-[#FF444A] border-b-4 border-black rounded px-2 py-1  hover:bg-white text-lg mr-5" : "text-lg font-normal text-white mr-5"}>Add Product</NavLink>
         <NavLink to="my cart" className={({isActive, isPending})=>isPending ? "pending" : isActive ? "text-[#FF444A] border-b-4 border-black rounded px-2 py-1  hover:bg-white text-lg mr-5" : "text-lg font-normal text-white mr-5"}>My Cart</NavLink>
         <NavLink to="my cart" className={({isActive, isPending})=>isPending ? "pending" : isActive ? "text-[#FF444A] border-b-4 border-black rounded px-2 py-1  hover:bg-white text-lg mr-5" : "text-lg font-normal text-white mr-5"}>My Cart</NavLink>
