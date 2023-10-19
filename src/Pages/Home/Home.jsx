@@ -1,8 +1,11 @@
+import Header from "../../Components/Header/Header";
+import SecondNav from "../../Components/Header/Navbar/SecondNav";
 
 const Home = () => {
   return (
     <div>
-      <h2 className="text-3xl">This is home</h2>
+      <SecondNav></SecondNav>
+      <Header></Header>
     </div>
   );
 };
