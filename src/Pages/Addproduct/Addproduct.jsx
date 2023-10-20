@@ -11,7 +11,9 @@ const Addproduct = () => {
     const price = form.price.value;
     const description = form.description.value;
     const rating = form.rating.value;
-    console.log(name, productname, image, type, price, description, rating);
+    // console.log(name, productname, image, type, price, description, rating);
+    const newProduct = {name, productname, image, type, price, description, rating};
+    console.log(newProduct);
   }
   return (
     <div className=" bg-gray-300">
