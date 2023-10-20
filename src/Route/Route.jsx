@@ -3,6 +3,8 @@ import Root from "../Root";
 import Error from "../Pages/Error/Error";
 import Home from "../Pages/Home/Home";
 import Brand from "../Components/Brand/Brand";
+import Addproduct from "../Pages/Addproduct/Addproduct";
+import MyCart from "../Pages/Mycart/MyCart";
 
 const Route = createBrowserRouter([
   {
@@ -18,6 +20,14 @@ const Route = createBrowserRouter([
       {
         path: "/brand",
         element: <Brand></Brand>
+      },
+      {
+        path: "/addproduct",
+        element: <Addproduct></Addproduct>
+      },
+      {
+        path: "/mycart",
+        element: <MyCart></MyCart>
       }
     ]
   }
