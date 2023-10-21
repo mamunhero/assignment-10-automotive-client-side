@@ -10,6 +10,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Sony from "../Components/Brand/Sony";
 import Update from "../Pages/Update/Update";
+import Details from "./Details/Details";
 
 const Route = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const Route = createBrowserRouter([
         path: "/update/:id",
         element: <Update></Update>,
         // loader: ({params})=> fetch(`http://localhost:5000/addProduct/${params.id}`)
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>
       }
     ]
   }

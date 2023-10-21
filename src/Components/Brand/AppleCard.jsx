@@ -21,7 +21,9 @@ const AppleCard = ({product}) => {
     </div>
     <span>Rating: {rating}</span>
     <div className="flex justify-between items-center">
-      <button className="btn btn-primary">Details button</button>
+     <Link to={`/details/${_id}`}>
+        <button className="btn btn-primary">Details button</button>
+     </Link>
      <Link to={`/update/${_id}`}>
         <button className="btn btn-primary">Update button</button>
      </Link>

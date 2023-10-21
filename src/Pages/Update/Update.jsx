@@ -12,7 +12,7 @@ const Update = () => {
     .then(response=>response.json())
     .then(data=> setProduct(data))
   },[params.id])
-  console.log(product);
+  // console.log(product);
   const { name, productname, image, type, price,  rating} = product || {}
   console.log(product);
   const handleUpdateProduct = event=> {
