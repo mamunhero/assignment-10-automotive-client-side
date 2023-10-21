@@ -9,6 +9,7 @@ import Apple from "../Components/Brand/Apple";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Sony from "../Components/Brand/Sony";
+import Update from "../Pages/Update/Update";
 
 const Route = createBrowserRouter([
   {
@@ -38,11 +39,7 @@ const Route = createBrowserRouter([
         element: <Apple></Apple>,
         loader: ({params})=> fetch(`http://localhost:5000/brand/${params.brandname}`)
       },
-      {
-        path: "/brand/:brandname",
-        element: <Sony></Sony>,
-        loader: ({params})=> fetch(`http://localhost:5000/brand/${params.brandname}`)
-      },
+      
       {
         path: "/login",
         element: <Login></Login>
@@ -50,9 +47,15 @@ const Route = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update>,
+        // loader: ({params})=> fetch(`http://localhost:5000/addProduct/${params.id}`)
       }
     ]
   }
 ])
 
 export default Route;
+
