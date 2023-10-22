@@ -6,7 +6,7 @@ const AppleCard = ({product}) => {
   return (
     <div>
       <div>
-        <h2>Hello world</h2>
+        
       </div>
       <div>
       <div className="card   bg-gray-100 w-full h-full shadow-xl">
