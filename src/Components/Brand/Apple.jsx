@@ -51,11 +51,55 @@ const Apple = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-5 mb-5 ">
        
        {
-         product.map(product=> <AppleCard key={product._id} product={product}></AppleCard>)
+        product.length == 0 && <h1> no data found </h1>
        }
-      
+       {
+        product.length > 0 && product.map(product=> <AppleCard key={product._id} product={product}></AppleCard>)
+       }
      </div>
-     <h2>Hello</h2>
+     <div className="mt-5 mb-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5
+     bg-yellow-200">
+        <div className="flex gap-5 border-2 border-red-500 py-10 shadow-lg rounded-lg">
+          <img src="https://i.ibb.co/4R0ttqd/delivery-truck.png" alt=""
+           className="w-12 h-10"/>
+          <div className="mt-2">
+            <h2>Free delivery</h2>
+            <p>Free Shipping for orders over $20</p>
+          </div>
+        </div>
+        <div className="flex gap-5 border-2 border-red-500 py-10 shadow-lg rounded-lg">
+          <img src="https://i.ibb.co/VvbQ349/24-hours-support.png" alt=""
+           className="w-12 h-10"/>
+          <div className="mt-2">
+            <h2>Support 24/7</h2>
+            <p>24 hours a day, 7 days a week</p>
+          </div>
+        </div>
+        <div className="flex gap-5 border-2 border-red-500 py-10 shadow-lg rounded-lg">
+          <img src="https://i.ibb.co/68TW11z/pay.png" alt=""
+           className="w-12 h-10"/>
+          <div className="mt-2">
+            <h2>Payment</h2>
+            <p>Pay with Multiple Credit Cards</p>
+          </div>
+        </div>
+        <div className="flex gap-5 border-2 border-red-500 py-10 shadow-lg rounded-lg">
+          <img src="https://i.ibb.co/3TYhbk1/reliability.png" alt=""
+           className="w-12 h-10"/>
+          <div className="mt-2">
+            <h2>Reliable</h2>
+            <p>Trusted by 2000+ major brands</p>
+          </div>
+        </div>
+        <div className="flex gap-5 border-2 border-red-500 py-10 shadow-lg rounded-lg">
+          <img src="https://i.ibb.co/QNn14yg/high-quality.png" alt=""
+           className="w-12 h-10"/>
+          <div className="mt-2">
+            <h2>Guarantee</h2>
+            <p>Within 30 days for an exchange</p>
+          </div>
+        </div>
+     </div>
       </div>
      
     </div>

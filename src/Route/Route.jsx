@@ -8,7 +8,6 @@ import MyCart from "../Pages/Mycart/MyCart";
 import Apple from "../Components/Brand/Apple";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
-import Sony from "../Components/Brand/Sony";
 import Update from "../Pages/Update/Update";
 import Details from "./Details/Details";
 
