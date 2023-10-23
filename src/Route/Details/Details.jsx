@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {  useParams } from "react-router-dom";
 import Logo from "../../Components/Header/Logo/Logo";
+import Swal from "sweetalert2";
 
 const Details = () => {
   const [product, setProduct] = useState({});
@@ -23,7 +24,14 @@ const Details = () => {
     .then(response=>response.json())
     .then(data=> {
       console.log(data);
-      alert("added is successfully")
+      if (data.insertedId) {
+        Swal.fire({
+          title: "Success!",
+          text: "Product added is  successfully",
+          icon: "success",
+          confirmButtonText: "Ok",
+        })
+      }
     })
   }
   useEffect(()=>{

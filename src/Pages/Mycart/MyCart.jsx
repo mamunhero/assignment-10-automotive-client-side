@@ -16,7 +16,7 @@ const MyCart = () => {
   return (
     <div>
       <Logo></Logo>
-      <h2>Hello World{products.length}</h2>
+      <h2 className="text-center text-red-400 md:text-4xl mt-5 mb-5">Product Added Details</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {
           products.map(product=> <CartCard key={product._id} product={product} setProducts={setProducts} products={products}></CartCard>)
