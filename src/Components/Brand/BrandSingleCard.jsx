@@ -2,7 +2,7 @@
 const BrandSingleCard = ({ brand }) => {
   const { name, logo, info } = brand || {};
   return (
-    <div>
+    <div className="">
       <div className="mt-10 mb-10">
         <div className="card  bg-base-100 shadow-xl w-96 h-96">
           <figure>

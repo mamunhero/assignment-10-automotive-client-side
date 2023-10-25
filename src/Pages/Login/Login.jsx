@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -16,18 +17,30 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
-    const mamun = "moon";
-    console.log(mamun);
-    signInUser(email, password)
+    if (email && password) {
+      signInUser(email, password)
     .then(result=> {
       console.log(result.user);
+      Swal.fire({
+        title: 'Good Job!',
+        text: 'Login is suceessful',
+        icon: 'success',
+        confirmButtonText: 'ok'
+      })
       form.reset();
       navigate("/");
     })
-    .catch(error=> {
+    .catch(error => {
       console.log(error);
-    })
-  }
+      Swal.fire({
+        title: 'Error!',
+        text: 'Login failed. Please check your email and password.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
+    });
+  } 
+}
   const handleGoogleLogin = () => {
     singInGoogle()
     .then(result=> {
