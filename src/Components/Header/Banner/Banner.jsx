@@ -28,7 +28,7 @@ const Banner = () => {
           </div>
           <div className='md:w-1/2'>
             <div className='w-full h-full flex items-center justify-center'>
-              <img src={sliderone} alt="slider-image" />
+              <img src="https://i.ibb.co/FXkS5VV/slider-image-one-removebg-preview.png" alt="" />
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ const Banner = () => {
           </div>
           <div className='md:w-1/2'>
             <div className='w-full h-full flex items-center justify-center'>
-              <img src={slidertwo} alt="slider-image" />
+              <img src="https://i.ibb.co/zPvb4Xj/slidewr-image-two-assignment.png" alt="" />
             </div>
           </div>
         </div>

@@ -1,21 +1,37 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from './../../Components/Header/Logo/Logo';
 import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false)
-  const {signInUser} =  useContext(AuthContext)
+  const {signInUser, singInGoogle} =  useContext(AuthContext)
+  const navigate = useNavigate();
+
   const handleLogin = event => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+    const mamun = "moon";
+    console.log(mamun);
     signInUser(email, password)
     .then(result=> {
       console.log(result.user);
+      form.reset();
+      navigate("/");
+    })
+    .catch(error=> {
+      console.log(error);
+    })
+  }
+  const handleGoogleLogin = () => {
+    singInGoogle()
+    .then(result=> {
+      console.log(result);
     })
     .catch(error=> {
       console.log(error);
@@ -39,7 +55,8 @@ const Login = () => {
             <span className="label-text">Password</span>
           </label>
           <div className='flex justify-center items-center'>
-            <input type={showPassword ? "text" : "password"}
+            <input 
+             type={showPassword ? "text" : "password"}
              placeholder="password" 
              name='password' 
              className="input input-bordered w-full" 
@@ -55,12 +72,14 @@ const Login = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <Link>
-            <button className="btn btn-primary w-full">Login</button>
-          </Link>
+          <button type='submit' className="btn btn-primary w-full">Login</button>
+        </div>
+        <div className="form-control mt-6">
+          <button onClick={handleGoogleLogin} type='submit' className="btn btn-secondary w-full">Google Login</button>
         </div>
       </form>
       <p className="text-center mt-5 text-2xl mb-5 ">New to this website ? <Link className="text-blue-500 font-bold text-2xl" to="/register">Please Register</Link></p>
+      
     </div>
   );
 };

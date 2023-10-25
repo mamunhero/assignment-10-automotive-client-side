@@ -10,6 +10,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Update from "../Pages/Update/Update";
 import Details from "./Details/Details";
+import PrivateRoute from "./PrivateRoute";
 
 const Route = createBrowserRouter([
   {
@@ -28,11 +29,11 @@ const Route = createBrowserRouter([
       },
       {
         path: "/addproduct",
-        element: <Addproduct></Addproduct>
+        element: <PrivateRoute><Addproduct></Addproduct></PrivateRoute>
       },
       {
         path: "/mycart",
-        element: <MyCart></MyCart>
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
       },
       {
         path: "/brand/:brandname",
@@ -56,7 +57,7 @@ const Route = createBrowserRouter([
       {
         path: "/details/:id",
         element: <Details></Details>
-      }
+      },
     ]
   }
 ])
