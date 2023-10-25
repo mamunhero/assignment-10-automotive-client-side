@@ -1,6 +1,8 @@
 # React + Vite
 # liveLink
-
+https://electronitech-87c2d.web.app
+# important
+If live link is not available then 2 or 3 refresh will show live link.
 # project Name: ElectroniTech
 ElectroniTech is a leading technology retailer offering a wide range of electronics, gadgets, and tech solutions. With a commitment to quality, innovation, and customer satisfaction, we provide the latest in cutting-edge technology. Explore our diverse product selection and experience the future of electronics with ElectroniTech.
 # Features

@@ -21,46 +21,54 @@ const Route = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch("http://localhost:5000/brand")
+        loader: () => fetch("https://assignment-10-automotive-server-side.vercel.app/brand"),
       },
       {
         path: "/brand",
-        element: <Brand></Brand>
+        element: <Brand></Brand>,
       },
       {
         path: "/addproduct",
-        element: <PrivateRoute><Addproduct></Addproduct></PrivateRoute>
+        element: (
+          <PrivateRoute>
+            <Addproduct></Addproduct>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/mycart",
-        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/brand/:brandname",
         element: <Apple></Apple>,
-        loader: ({params})=> fetch(`http://localhost:5000/brand/${params.brandname}`)
+        loader: ({ params }) =>
+          fetch(`https://assignment-10-automotive-server-side.vercel.app/brand/${params.brandname}`),
       },
-      
+
       {
         path: "/login",
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: "/register",
-        element: <Register></Register>
+        element: <Register></Register>,
       },
       {
         path: "/update/:id",
         element: <Update></Update>,
-        // loader: ({params})=> fetch(`http://localhost:5000/addProduct/${params.id}`)
+        // loader: ({params})=> fetch(`https://assignment-10-automotive-server-side.vercel.app/addProduct/${params.id}`)
       },
       {
         path: "/details/:id",
-        element: <Details></Details>
+        element: <Details></Details>,
       },
-    ]
-  }
-])
+    ],
+  },
+]);
 
 export default Route;
-
